@@ -37,7 +37,7 @@ editor_options:
 
 ## MACHINE LEARNING - a sub-field of Artificial Intelligence
 
-    ![](LectureClass_Fig1.png)
+![](LectureClass_Fig1.png)
 
 ![](LectureClass_Fig2.png){width="517"}
 
@@ -198,7 +198,7 @@ text(185, 350, "cluster 3", col="black")
 
 -   **Continuous data**: the Euclidian distance but not only
 
-    -   ![](Distance_two_points.png)
+![](Distance_two_points.png)
 
 -   Generalizing the Euclidian distance to two n-dimensional vectors:
 
@@ -549,7 +549,7 @@ legend("topright", ncol=1, legend = c("RedMeat", "WhiteMeat", "Eggs", "MILK", "F
 
 -   Data retrieval and normalization
 
--   Splitting the data into training and testing sets
+-   Splitting the data into training and testing sets
 
 -   Fitting models on the training data
 
