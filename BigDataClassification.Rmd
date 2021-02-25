@@ -72,13 +72,13 @@ dim(hotdog)
 hotdog[1:10,]
 ```
 
-An ordinary quick plot
+-   An ordinary quick plot
 
 ```{r }
 plot(hotdog$Calories, hotdog$Sodium, main = "Hotdogs", xlab="Calories", ylab="Sodium", pch=1, col="black")	
 ```
 
-Labeling the data in two ways: using plot function and a ggplot
+-   Labeling the data in two ways: using plot function and a ggplot
 
 ```{r }
 plot(hotdog$Calories, hotdog$Sodium, main = "Hotdogs", xlab="Calories", ylab="Sodium", pch=1, col="black")	
@@ -93,8 +93,8 @@ gg1_plot = ggplot(hotdog, aes(x=Calories, y=Sodium)) +
 gg1_plot
 ```
 
-Some potential grouping - just trying (manually/visually). No particular
-techniques applied!
+-   Some potential grouping - just trying (manually/visually). No
+    particular techniques applied!
 
 ```{r }
 plot(hotdog$Calories, hotdog$Sodium, main = "Hotdogs", xlab="Calories", ylab="Sodium", pch=1, col="black")	
@@ -112,26 +112,26 @@ text(140, 200, "cluster 2", col="black")
 text(185, 350, "cluster 3", col="black")	
 ```
 
-Potential interpretation:
+#### Potential interpretation:
 
-Cluster 1 - hot dogs of low calories and medium sodium content; Cluster
-2 - has both calorie and sodium at medium levels; Cluster 3 - has both
-sodium and calories at high levels.
+-   Cluster 1 - hot dogs of low calories and medium sodium content;
+    Cluster 2 - has both calorie and sodium at medium levels; Cluster
+    3 - has both sodium and calories at high levels.
 
-We can make a bold guess about the meats used in these three clusters of
-hot dogs, i.e.
+-   We can make a bold guess about the meats used in these three
+    clusters of hot dogs, i.e.
 
-Cluster 1: probably mostly chicken meat since it has low calories.
-Cluster 2: might be beef and Cluster 3: likely to be pork,
+-   Cluster 1: probably mostly chicken meat since it has low calories.
+    Cluster 2: might be beef and Cluster 3: likely to be pork,
 
-Beef hot dogs have considerably less calories and salt than pork hot
-dogs.
+-   Beef hot dogs have considerably less calories and salt than pork hot
+    dogs.
 
-However, this is just guessing. Some hot dogs have a mixture of two or
-three types of meat.
+-   However, this is just guessing. Some hot dogs have a mixture of two
+    or three types of meat.
 
-The real situation is somewhat similar to what we guessed but with some
-random noise, especially in cluster 2.
+-   The real situation is somewhat similar to what we guessed but with
+    some random noise, especially in cluster 2.
 
 ### CLUSTER ANALYSIS - A METHOD OF UNSUPERVISED CLASSIFICATION
 
@@ -382,13 +382,12 @@ plot(sil1, cex=0.5)
 
 #### INTERPRETATION
 
-Silhouette plots represent the most appropriate evaluation strategy to
-assess the quality of the clustering. This graph shows that 4 data
-points correspond to a negative Silhouette values, suggesting these
-cases may be "mis-clustered", or perhaps are ambiguous as the Silhouette
-value is close to 0.
+-   Silhouette plots represent the most appropriate evaluation strategy
+    to assess the quality of the clustering.
 
-Always think in context
+-   This graph shows that 4 data points correspond to a negative
+    Silhouette values, suggesting these cases may be "mis-clustered", or
+    perhaps are ambiguous as the Silhouette value is close to 0.
 
 ```{r }
 clusplot(protein_data.stand, k.means.fit$cluster, main='2D representation of the Cluster solution',
@@ -477,7 +476,7 @@ plot(gmm_clust, what="density")
 plot(gmm_clust, what="classification")
 ```
 
-#### FITTING THE IDEAL NUMBER OF CLUSTERS NOW
+#### FITTING THE IDEAL NUMBER OF CLUSTERS
 
 ```{r }
 ###OPTIMIZATION CLUSTERING 
@@ -760,7 +759,7 @@ summary(knntuning)
 
 -   **K-mean**
 
-    -   an unsupervised learning technique  (no dependent variable)
+    -   an unsupervised learning technique (no dependent variable)
 
     -   a clustering technique which tries to split data points into
         K-clusters such that the points in each cluster tend to be near
